@@ -4,7 +4,8 @@ pipeline {
     stage('Run shared lib...') {
       steps {
           sendNotifications (
-            buildStatus: 'buildstatus1'
+            buildStatus: 'buildstatus1',
+            message: 'mymessage'
           )
       }
     }
