@@ -10,5 +10,7 @@ def call(Map config) {
 
         def bar = new Bar()
         println ":> ${bar.sayHello()}"
+
+        println "Additional message ${config.message}"
     }
 }
