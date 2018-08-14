@@ -4,10 +4,11 @@ import org.foo.Bar
 /**
  * Send notifications based on build status string
  */
-def call(String buildStatus = 'STARTED') {
-    println "SendNotification! ${buildStatus}"
+def call(Map config) {
+    node {
+        println "SendNotification! ${config.buildStatus}"
 
-    def bar = new Bar()
-    println ":> ${bar.sayHello()}"
-
+        def bar = new Bar()
+        println ":> ${bar.sayHello()}"
+    }
 }
